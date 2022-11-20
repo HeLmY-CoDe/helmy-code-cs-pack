@@ -1,0 +1,116 @@
+{
+    "JS - Alert": {
+        "prefix": "_alert",
+        "body": [
+            "alert(${1:foo});"
+        ],
+        "description": "JS - Alert"
+    },
+    "JS - console log": {
+        "prefix": "_console",
+        "body": [
+            "console.log(${1:foo});"
+        ],
+        "description": "JS - console log"
+    },
+    "JS - console log template literals": {
+        "prefix": "_consoleTL",
+        "body": [
+            "console.log(`${1:foo}`);"
+        ],
+        "description": "JS - console log template literals"
+    },
+    "JS - Comment Separator": {
+        "prefix": "_cs",
+        "body": [
+            "/* ------------------------- */"
+        ],
+        "description": "JS - Comment Separator"
+    },
+    "JS - Comment Separator Text": {
+        "prefix": "_csText",
+        "body": [
+            "/* ------- ${1:Text} ------- */"
+        ],
+        "description": "JS - Comment Separator Text"
+    },
+    "JS - Variable en template literals": {
+        "prefix": "_$",
+        "body": "\\${${1:foo}}",
+        "description": "JS - Variable en template literals"
+    },
+    "JQuery - $.ajax": {
+        "prefix": "_ajaxJQ",
+        "body": [
+            "$.ajax({\r",
+            "\turl: '${1:ajax/}',\r",
+            "\ttype: '${2:POST}',\r",
+            "\tdataType: '${3:json}',\r",
+            "\tcontentType: false,\r",
+            "\tprocessData: false,\r",
+            "\tcache: false,\r",
+            "\tdata: ${4:data},\r",
+            "\tbeforeSend: function () {\r",
+            "\t\t$5",
+            "\t}\r",
+            "\r",
+            "}).done(function (res) {\r",
+            "\t$6",
+            "}).fail(function (err) {\r",
+            "\t$7",
+            "}).always(function () {\r",
+            "\t$8",
+            "})"
+        ],
+        "description": "JQuery - $.ajax"
+    },
+    "JQuery - ready()": {
+        "prefix": "_readyJQ",
+        "body": [
+            "$(document).ready(function() {",
+            "    ${1:console.log('READY!');}",
+            "});"
+        ],
+        "description": "JQuery - ready()"
+    },
+    "JQuery - ready() shorthand": {
+        "prefix": "_readyShorthandJQ",
+        "body": [
+            "$(function () {\r",
+            "    ${1:console.log('READY!');}",
+            "});"
+        ],
+        "description": "JQuery - ready() shorthand"
+    },
+    "JS - console.log": {
+        "prefix": "_consoleLog",
+        "body": [
+            "console.log(${1:foo});"
+        ],
+        "description": "JS - console.log"
+    },
+    "JS - Text console.log": {
+        "prefix": "_consoleLogTxt",
+        "body": [
+            "console.log('${1:foo}:', ${1:foo});"
+        ],
+        "description": "JS - Text console.log"
+    },
+    "JS - console.log - return": {
+        "prefix": "_consoleLogReturn",
+        "body": [
+            "console.log(${1:foo});",
+            "return;"
+        ],
+        "description": "JS - console.log - return"
+    },
+    "JS - Section Comment": {
+        "prefix": "_sectionCom",
+        "body": [
+            "/*--------------------------------------------------------------",
+            "# ${1:Comment}",
+            "--------------------------------------------------------------*/"
+        ],
+        "description": "JS - Section Comment"
+    }
+}

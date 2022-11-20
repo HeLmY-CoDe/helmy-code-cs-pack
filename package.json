@@ -1,0 +1,55 @@
+{
+  "name": "helmy-code-cs-pack",
+  "displayName": "HeLmY CoDe - Web Development Code Snippets Pack",
+  "description": "HeLmY's Web Development Code Snippets complement pack!",
+  "version": "0.0.7",
+  "engines": {
+    "vscode": "*"
+  },
+  "categories": [
+    "Snippets",
+    "Programming Languages"
+  ],
+  "icon": "img/helmy-code.png",
+  "author": {
+    "name": "Helmuth J. Paz Vargas",
+    "email": "helmy.pv.code@gmail.com"
+  },
+  "publisher": "helmy-code",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HeLmY-CoDe/helmy-code-cs-pack.git"
+  },
+  "keywords": [
+    "snippets",
+    "productivity",
+    "coding",
+    "php",
+    "psr"
+  ],
+  "license": "MIT",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "apacheconf",
+        "path": "./snippets/helmy-apacheconf.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/helmy-css.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/helmy-html.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/helmy-javascript.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/helmy-php.json"
+      }
+    ]
+  }
+}

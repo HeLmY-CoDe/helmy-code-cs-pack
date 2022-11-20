@@ -1,0 +1,382 @@
+{
+    "PHP - Close tag": {
+        "prefix": "_phpClose",
+        "body": [
+            "?>"
+        ],
+        "description": "PHP - Close tag"
+    },
+    "PHP - include": {
+        "prefix": "_include",
+        "body": [
+            "include '$ruta';"
+        ],
+        "description": "PHP - include"
+    },
+    "PHP - include_once": {
+        "prefix": "_includeOnce",
+        "body": [
+            "include_once '$ruta';"
+        ],
+        "description": "PHP - include_once"
+    },
+    "PHP - require": {
+        "prefix": "_require",
+        "body": [
+            "require '$ruta';"
+        ],
+        "description": "PHP - require"
+    },
+    "PHP - require_once": {
+        "prefix": "_requireOnce",
+        "body": [
+            "require_once '$ruta';"
+        ],
+        "description": "PHP - require_once"
+    },
+    "PHP - Test de Variable con <pre>, print_r()": {
+        "prefix": "_printrTest",
+        "body": [
+            "echo '<pre>$2';",
+            "print_r($${1:var});",
+            "echo '</pre>';"
+        ],
+        "description": "PHP - Test de Variable con <pre>, print_r()"
+    },
+    "PHP - Test de Variable con <pre>, var_dump()": {
+        "prefix": "_vardumpTest",
+        "body": [
+            "echo '<pre>$2';",
+            "var_dump($${1:var});",
+            "echo '</pre>';"
+        ],
+        "description": "PHP - Test de Variable con <pre>, var_dump()"
+    },
+    "PHP - Test de Variable con <pre>, print_r() y exit()": {
+        "prefix": "_printrTestExit",
+        "body": [
+            "echo '<pre>$2';",
+            "print_r($${1:var});",
+            "echo '</pre>';",
+            "exit();"
+        ],
+        "description": "PHP - Test de Variable con <pre>, print_r() y exit()"
+    },
+    "PHP - Test de Variable con <pre>, var_dump() y exit()": {
+        "prefix": "_vardumpTestExit",
+        "body": [
+            "echo '<pre>$2';",
+            "var_dump($${1:var});",
+            "echo '</pre>';",
+            "exit();"
+        ],
+        "description": "PHP - Test de Variable con <pre>, var_dump() y exit()"
+    },
+    "PHP - Imprimir variable de prueba con nombre": {
+        "prefix": "_echoVarTest",
+        "body": [
+            "echo '${1:nombreVar}: ' . \\$${2:var};"
+        ],
+        "description": "PHP - Imprimir variable de prueba con nombre"
+    },
+    "PHP - Imprimir variable de prueba con <br> y nombre": {
+        "prefix": "_echoVarTest-br",
+        "body": [
+            "echo '<br>${1:nombreVar}: ' . \\$${2:var};"
+        ],
+        "description": "PHP - Imprimir variable de prueba con <br> y nombre"
+    },
+    "PHP - Imprimir variable con echo": {
+        "prefix": "_echoVar",
+        "body": [
+            "<?php echo $$var; ?>"
+        ],
+        "description": "PHP - Imprimir variable con echo"
+    },
+    "PHP - Test de $_POST con <pre>, print_r()": {
+        "prefix": "_printrPOST",
+        "body": [
+            "echo '<pre>';",
+            "print_r(\\$_POST);",
+            "echo '</pre>';"
+        ],
+        "description": "PHP - Test de $_POST con <pre>, print_r()"
+    },
+    "PHP - Test de $_GET con <pre>, print_r()": {
+        "prefix": "_printrGET",
+        "body": [
+            "echo '<pre>';",
+            "print_r(\\$_GET);",
+            "echo '</pre>';"
+        ],
+        "description": "PHP - Test de $_GET con <pre>, print_r()"
+    },
+    "PHP - Imprimir en pantalla con echo": {
+        "prefix": "_echo",
+        "body": [
+            "echo '$1';"
+        ],
+        "description": "PHP - Imprimir en pantalla con echo"
+    },
+    "PHP - new Object": {
+        "prefix": "_newObject",
+        "body": [
+            "\\$${1:ClassObj} = new ${1:ClassObj}();"
+        ],
+        "description": "PHP - new Object"
+    },
+    "PHP - new Object - self()": {
+        "prefix": "_newObjectSelf",
+        "body": [
+            "\\$${1:ClassObj} = new self();"
+        ],
+        "description": "PHP - new Object - self()"
+    },
+    "PHP - Instanciar Objeto": {
+        "prefix": "_newObj",
+        "body": [
+            "\\$${1:obj} = new ${2:Class}();"
+        ],
+        "description": "PHP - Instanciar Objeto"
+    },
+    "PHP - Instanciar Objeto con parámetros": {
+        "prefix": "_newObjParam",
+        "body": [
+            "\\$${1:obj} = new ${2:Class}(${3:params});"
+        ],
+        "description": "PHP - Instanciar Objeto con parámetros"
+    },
+    "PHP - Función Simple": {
+        "prefix": "_function",
+        "body": [
+            "function ${1:nombreFuncion}(\\$${2:param})",
+            "{",
+            "    $3",
+            "}"
+        ],
+        "description": "PHP - Función Simple"
+    },
+    "PHP - class public function": {
+        "prefix": "_pubfunction",
+        "body": [
+            "public function ${1:nombreFuncion}(\\$${2:param})",
+            "{",
+            "    $3",
+            "}"
+        ],
+        "description": "PHP - class public function"
+    },
+    "PHP - class private function": {
+        "prefix": "_privfunction",
+        "body": [
+            "private function ${1:nombreFuncion}(\\$${2:param})",
+            "{",
+            "    $3",
+            "}"
+        ],
+        "description": "PHP - class private function"
+    },
+    "PHP - PDO try - catch": {
+        "prefix": "_try-catch",
+        "body": [
+            "try {",
+            "    $1",
+            "} catch (\\PDOException \\$e) {",
+            "    echo '<br>ERROR: ' . \\$e->getMessage();",
+            "}"
+        ],
+        "description": "PHP - PDO try - catch"
+    },
+    "PHP - PDO try - catch - die": {
+        "prefix": "_try-catch-die",
+        "body": [
+            "try {",
+            "    $1",
+            "} catch (\\PDOException \\$e) {",
+            "    die ('<br>ERROR: ') . \\$e->getMessage();",
+            "}"
+        ],
+        "description": "PHP - PDO try - catch - die"
+    },
+    "PHP - echo <br> HTML": {
+        "prefix": "_br",
+        "body": [
+            "echo '<br>$1';"
+        ],
+        "description": "PHP - echo <br> HTML"
+    },
+    "PHP - echo <hr> HTML": {
+        "prefix": "_hr",
+        "body": [
+            "echo '<hr>';"
+        ],
+        "description": "PHP - echo <hr> HTML"
+    },
+    "PHP - Comment Separator": {
+        "prefix": "_comSep",
+        "body": [
+            "# ------------------------- #"
+        ],
+        "description": "PHP - Comment Separator"
+    },
+    "PHP - Text Comment Separator": {
+        "prefix": "_comSepText",
+        "body": [
+            "# ------- ${1:text} ------- #"
+        ],
+        "description": "PHP - Text Comment Separator"
+    },
+    "PHP - echo <p></p> HTML": {
+        "prefix": "_p",
+        "body": "echo \"<p>$1</p>\";",
+        "description": "PHP - echo <p></p> HTML"
+    },
+    "PHP - echo <br> $key => $value": {
+        "prefix": "_keyVal",
+        "body": "echo '<br>' . \\$key . ' => ' . \\$value;",
+        "description": "PHP - echo <br> $key => $value"
+    },
+    "PHP - <p>TEST</p> <pre> var_dump($test) </pre>": {
+        "prefix": "_pPreVardumpTest",
+        "body": [
+            "echo '<p>${1:TEST}</p>';\r",
+            "echo '<pre>';\r",
+            "var_dump(\\$${2:test});\r",
+            "echo '</pre>';"
+        ],
+        "description": "PHP - <p>TEST</p> <pre> var_dump($test) </pre>"
+    },
+    "PHP - echo <code> $var </code>": {
+        "prefix": "_echoCode",
+        "body": "echo '<br><code>' . \\$${1:var} . '</code>';",
+        "description": "PHP - echo <code> $var </code>"
+    },
+    "PHP - Class Structure": {
+        "prefix": "_class",
+        "body": [
+            "class ${1:ClassName}",
+            "{",
+            "    $2",
+            "}"
+        ],
+        "description": "PHP - class Structure"
+    },
+    "PHP - Class __construct": {
+        "prefix": "_construct",
+        "body": [
+            "public function __construct($1)",
+            "{",
+            "    $2",
+            "}"
+        ],
+        "description": "PHP - Class __construct"
+    },
+    "PHP - Class Extends Structure": {
+        "prefix": "_classEx",
+        "body": [
+            "class ${1:ClassName} extends ${2:ClassExtend}",
+            "{",
+            "    $3",
+            "}"
+        ],
+        "description": "PHP - Class Extends Structure"
+    },
+    "PHP - Class Structure __construct ": {
+        "prefix": "_classConstruct",
+        "body": [
+            "class ${1:ClassName}",
+            "{",
+            "    $2",
+            "    ",
+            "    public function __construct($3)",
+            "    {",
+            "        $4",
+            "    }",
+            "}"
+        ],
+        "description": "PHP - Class Structure __construct"
+    },
+    "PHP - echo <hr>Text": {
+        "prefix": "_hrText",
+        "body": [
+            "echo '<hr>${1:Text}';"
+        ],
+        "description": "PHP - echo <hr>Text"
+    },
+    "PHP - return $this": {
+        "prefix": "_returnThis",
+        "body": "return \\$this;",
+        "description": "PHP - return $this"
+    },
+    "PHP - $this": {
+        "prefix": "_this",
+        "body": "\\$this->",
+        "description": "PHP - $this"
+    },
+    "PHP - if (isset())": {
+        "prefix": "_ifIsset",
+        "body": [
+            "if (isset(\\$${1:var})) {",
+            "    $2",
+            "}"
+        ],
+        "description": "PHP - if (isset())"
+    },
+    "PHP - $this->foo = $foo": {
+        "prefix": "_thisFoo",
+        "body": "\\$this->${1:foo} = \\$${1:foo};",
+        "description": "PHP - $this->foo = $foo"
+    },
+    "PHP - get_class_methods - print_r": {
+        "prefix": "_getClassMethodsPrintR",
+        "body": [
+            "echo '<pre>CLASS METHODS: ';",
+            "print_r(get_class_methods(${1:Class}));",
+            "echo '</pre>';"
+        ],
+        "description": "PHP - get_class_methods - print_r"
+    },
+    "PHP - Section Comment": {
+        "prefix": "_section-comment",
+        "body": [
+            "/*--------------------------------------------------------------",
+            "# ${1:Comment}",
+            "--------------------------------------------------------------*/"
+        ],
+        "description": "PHP - Section Comment"
+    },
+    "Single Comment # ►": {
+        "prefix": "_sComment",
+        "body": "# ► ${1:Single Comment}",
+        "description": "Single Comment # ►"
+    },
+    "PHP - DocBlocker": {
+        "prefix": "_docBlocker",
+        "body": [
+            "/**",
+            " * ► ${1:Comment}",
+            " *",
+            " * @param ${2:param}",
+            " *",
+            " * @return ${3:return}",
+            " */"
+        ],
+        "description": "PHP - DocBlocker"
+    },
+    "PHP - DocBlocker Single": {
+        "prefix": "_docBlockerSingle",
+        "body": [
+            "/**",
+            " * ► ${1:Comment}",
+            " *",
+            " * @return ${2:void}",
+            " */"
+        ],
+        "description": "PHP - DocBlocker Single"
+    },
+    "PHP - Strict Types ON": {
+        "prefix": "_strictTypesON",
+        "body": "declare(strict_types=1);",
+        "description": "PHP - Strict Types ON"
+    }
+}
