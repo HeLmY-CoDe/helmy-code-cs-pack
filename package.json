@@ -2,7 +2,7 @@
   "name": "helmy-code-cs-pack",
   "displayName": "HeLmY CoDe - Web Development Code Snippets Pack",
   "description": "HeLmY's Web Development Code Snippets complement pack!",
-  "version": "0.0.7",
+  "version": "1.0.6",
   "engines": {
     "vscode": "*"
   },
