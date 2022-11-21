@@ -21,14 +21,14 @@
         "description": "JS - console log template literals"
     },
     "JS - Comment Separator": {
-        "prefix": "_cs",
+        "prefix": "_comSep",
         "body": [
             "/* ------------------------- */"
         ],
         "description": "JS - Comment Separator"
     },
     "JS - Comment Separator Text": {
-        "prefix": "_csText",
+        "prefix": "_comSepText",
         "body": [
             "/* ------- ${1:Text} ------- */"
         ],
