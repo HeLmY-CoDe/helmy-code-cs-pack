@@ -10,7 +10,7 @@
     "Snippets",
     "Programming Languages"
   ],
-  "icon": "icon/helmy-code.png",
+  "icon": "icon/helmy-code-snippets.png",
   "author": {
     "name": "Helmuth J. Paz Vargas",
     "email": "helmy.pv.code@gmail.com"
@@ -24,8 +24,11 @@
     "snippets",
     "productivity",
     "coding",
+    "html",
+    "css",
+    "javascript",
     "php",
-    "psr"
+    "apache"
   ],
   "license": "MIT",
   "contributes": {
