@@ -1,41 +1,41 @@
 {
     "PHP - Close tag": {
-        "prefix": "_phpClose",
+        "prefix": "_php_close-tag",
         "body": [
             "?>"
         ],
         "description": "PHP - Close tag"
     },
     "PHP - include": {
-        "prefix": "_include",
+        "prefix": "_php_include",
         "body": [
             "include '$ruta';"
         ],
         "description": "PHP - include"
     },
     "PHP - include_once": {
-        "prefix": "_includeOnce",
+        "prefix": "_php_include_once",
         "body": [
             "include_once '$ruta';"
         ],
         "description": "PHP - include_once"
     },
     "PHP - require": {
-        "prefix": "_require",
+        "prefix": "_php_require",
         "body": [
             "require '$ruta';"
         ],
         "description": "PHP - require"
     },
     "PHP - require_once": {
-        "prefix": "_requireOnce",
+        "prefix": "_php_require_once",
         "body": [
             "require_once '$ruta';"
         ],
         "description": "PHP - require_once"
     },
     "PHP - Test de Variable con <pre>, print_r()": {
-        "prefix": "_printrTest",
+        "prefix": "_php_print_r-test",
         "body": [
             "echo '<pre>$2';",
             "print_r($${1:var});",
@@ -44,7 +44,7 @@
         "description": "PHP - Test de Variable con <pre>, print_r()"
     },
     "PHP - Test de Variable con <pre>, var_dump()": {
-        "prefix": "_vardumpTest",
+        "prefix": "_php_var_dump-test",
         "body": [
             "echo '<pre>$2';",
             "var_dump($${1:var});",
@@ -53,7 +53,7 @@
         "description": "PHP - Test de Variable con <pre>, var_dump()"
     },
     "PHP - Test de Variable con <pre>, print_r() y exit()": {
-        "prefix": "_printrTestExit",
+        "prefix": "_php_print_r-test-exit",
         "body": [
             "echo '<pre>$2';",
             "print_r($${1:var});",
@@ -63,7 +63,7 @@
         "description": "PHP - Test de Variable con <pre>, print_r() y exit()"
     },
     "PHP - Test de Variable con <pre>, var_dump() y exit()": {
-        "prefix": "_vardumpTestExit",
+        "prefix": "_php_var_dump-test-exit",
         "body": [
             "echo '<pre>$2';",
             "var_dump($${1:var});",
@@ -73,28 +73,28 @@
         "description": "PHP - Test de Variable con <pre>, var_dump() y exit()"
     },
     "PHP - Imprimir variable de prueba con nombre": {
-        "prefix": "_echoVarTest",
+        "prefix": "_php_echo-var-test",
         "body": [
             "echo '${1:nombreVar}: ' . \\$${2:var};"
         ],
         "description": "PHP - Imprimir variable de prueba con nombre"
     },
     "PHP - Imprimir variable de prueba con <br> y nombre": {
-        "prefix": "_echoVarTest-br",
+        "prefix": "_php_echo-var-test-br",
         "body": [
             "echo '<br>${1:nombreVar}: ' . \\$${2:var};"
         ],
         "description": "PHP - Imprimir variable de prueba con <br> y nombre"
     },
     "PHP - Imprimir variable con echo": {
-        "prefix": "_echoVar",
+        "prefix": "_php_echo-var",
         "body": [
             "<?php echo $$var; ?>"
         ],
         "description": "PHP - Imprimir variable con echo"
     },
     "PHP - Test de $_POST con <pre>, print_r()": {
-        "prefix": "_printrPOST",
+        "prefix": "_php_print_r-POST",
         "body": [
             "echo '<pre>';",
             "print_r(\\$_POST);",
@@ -103,7 +103,7 @@
         "description": "PHP - Test de $_POST con <pre>, print_r()"
     },
     "PHP - Test de $_GET con <pre>, print_r()": {
-        "prefix": "_printrGET",
+        "prefix": "_php_print_r-GET",
         "body": [
             "echo '<pre>';",
             "print_r(\\$_GET);",
@@ -112,42 +112,42 @@
         "description": "PHP - Test de $_GET con <pre>, print_r()"
     },
     "PHP - Imprimir en pantalla con echo": {
-        "prefix": "_echo",
+        "prefix": "_php_echo",
         "body": [
             "echo '$1';"
         ],
         "description": "PHP - Imprimir en pantalla con echo"
     },
     "PHP - new Object": {
-        "prefix": "_newObject",
+        "prefix": "_php_same-new-Object",
         "body": [
             "\\$${1:ClassObj} = new ${1:ClassObj}();"
         ],
         "description": "PHP - new Object"
     },
     "PHP - new Object - self()": {
-        "prefix": "_newObjectSelf",
+        "prefix": "_php_new-Object-Self",
         "body": [
             "\\$${1:ClassObj} = new self();"
         ],
         "description": "PHP - new Object - self()"
     },
     "PHP - Instanciar Objeto": {
-        "prefix": "_newObj",
+        "prefix": "_php_new-Object",
         "body": [
             "\\$${1:obj} = new ${2:Class}();"
         ],
         "description": "PHP - Instanciar Objeto"
     },
     "PHP - Instanciar Objeto con parámetros": {
-        "prefix": "_newObjParam",
+        "prefix": "_php_new-Object-args",
         "body": [
-            "\\$${1:obj} = new ${2:Class}(${3:params});"
+            "\\$${1:obj} = new ${2:Class}(${3:args});"
         ],
         "description": "PHP - Instanciar Objeto con parámetros"
     },
     "PHP - Función Simple": {
-        "prefix": "_function",
+        "prefix": "_php_function",
         "body": [
             "function ${1:nombreFuncion}(\\$${2:param})",
             "{",
@@ -157,7 +157,7 @@
         "description": "PHP - Función Simple"
     },
     "PHP - class public function": {
-        "prefix": "_pubfunction",
+        "prefix": "_php_public-function",
         "body": [
             "public function ${1:nombreFuncion}(\\$${2:param})",
             "{",
@@ -167,7 +167,7 @@
         "description": "PHP - class public function"
     },
     "PHP - class private function": {
-        "prefix": "_privfunction",
+        "prefix": "_php_private-function",
         "body": [
             "private function ${1:nombreFuncion}(\\$${2:param})",
             "{",
@@ -176,68 +176,78 @@
         ],
         "description": "PHP - class private function"
     },
+    "PHP - class static function": {
+        "prefix": "_php_static-function",
+        "body": [
+            "${1:public }static function ${2:nombreFuncion}(\\$${3:param})",
+            "{",
+            "    $4",
+            "}"
+        ],
+        "description": "PHP - class static function"
+    },
     "PHP - PDO try - catch": {
-        "prefix": "_try-catch",
+        "prefix": "_php_try-catch",
         "body": [
             "try {",
             "    $1",
             "} catch (\\PDOException \\$e) {",
-            "    echo '<br>ERROR: ' . \\$e->getMessage();",
+            "    die(\"<p>ERROR!<br>{\\$e->getMessage()}</p>\");",
             "}"
         ],
         "description": "PHP - PDO try - catch"
     },
     "PHP - PDO try - catch - die": {
-        "prefix": "_try-catch-die",
+        "prefix": "_php_try-catch-die",
         "body": [
             "try {",
             "    $1",
             "} catch (\\PDOException \\$e) {",
-            "    die ('<br>ERROR: ') . \\$e->getMessage();",
+            "    die(\"<p>ERROR!<br>{\\$e->getMessage()}</p>\");",
             "}"
         ],
         "description": "PHP - PDO try - catch - die"
     },
     "PHP - echo <br> HTML": {
-        "prefix": "_br",
+        "prefix": "_php_br-tag",
         "body": [
             "echo '<br>$1';"
         ],
         "description": "PHP - echo <br> HTML"
     },
     "PHP - echo <hr> HTML": {
-        "prefix": "_hr",
+        "prefix": "_php_hr-tag",
         "body": [
             "echo '<hr>';"
         ],
         "description": "PHP - echo <hr> HTML"
     },
     "PHP - Comment Separator": {
-        "prefix": "_comSep",
+        "prefix": "_php_comment-separator",
         "body": [
             "# ------------------------- #"
         ],
         "description": "PHP - Comment Separator"
     },
     "PHP - Text Comment Separator": {
-        "prefix": "_comSepText",
+        "prefix": "_php_text-comment-separator",
         "body": [
             "# ------- ${1:text} ------- #"
         ],
         "description": "PHP - Text Comment Separator"
     },
     "PHP - echo <p></p> HTML": {
-        "prefix": "_p",
+        "prefix": "_php_p-tag",
         "body": "echo \"<p>$1</p>\";",
         "description": "PHP - echo <p></p> HTML"
     },
     "PHP - echo <br> $key => $value": {
-        "prefix": "_keyVal",
+        "prefix": "_php_key-val",
         "body": "echo '<br>' . \\$key . ' => ' . \\$value;",
         "description": "PHP - echo <br> $key => $value"
     },
     "PHP - <p>TEST</p> <pre> var_dump($test) </pre>": {
-        "prefix": "_pPreVardumpTest",
+        "prefix": "_php_p-pre-var_dump-test",
         "body": [
             "echo '<p>${1:TEST}</p>';\r",
             "echo '<pre>';\r",
@@ -247,12 +257,12 @@
         "description": "PHP - <p>TEST</p> <pre> var_dump($test) </pre>"
     },
     "PHP - echo <code> $var </code>": {
-        "prefix": "_echoCode",
+        "prefix": "_php_echo-code",
         "body": "echo '<br><code>' . \\$${1:var} . '</code>';",
         "description": "PHP - echo <code> $var </code>"
     },
     "PHP - Class Structure": {
-        "prefix": "_class",
+        "prefix": "_php_class",
         "body": [
             "class ${1:ClassName}",
             "{",
@@ -262,7 +272,7 @@
         "description": "PHP - class Structure"
     },
     "PHP - Class __construct": {
-        "prefix": "_construct",
+        "prefix": "_php_class-construct",
         "body": [
             "public function __construct($1)",
             "{",
@@ -272,7 +282,7 @@
         "description": "PHP - Class __construct"
     },
     "PHP - Class Extends Structure": {
-        "prefix": "_classEx",
+        "prefix": "_php_class-extends",
         "body": [
             "class ${1:ClassName} extends ${2:ClassExtend}",
             "{",
@@ -282,7 +292,7 @@
         "description": "PHP - Class Extends Structure"
     },
     "PHP - Class Structure __construct ": {
-        "prefix": "_classConstruct",
+        "prefix": "_php_class-construct",
         "body": [
             "class ${1:ClassName}",
             "{",
@@ -297,24 +307,24 @@
         "description": "PHP - Class Structure __construct"
     },
     "PHP - echo <hr>Text": {
-        "prefix": "_hrText",
+        "prefix": "_php-text-hr-tag",
         "body": [
             "echo '<hr>${1:Text}';"
         ],
         "description": "PHP - echo <hr>Text"
     },
     "PHP - return $this": {
-        "prefix": "_returnThis",
+        "prefix": "_php_return-this",
         "body": "return \\$this;",
         "description": "PHP - return $this"
     },
     "PHP - $this": {
-        "prefix": "_this",
+        "prefix": "_php_this",
         "body": "\\$this->",
         "description": "PHP - $this"
     },
     "PHP - if (isset())": {
-        "prefix": "_ifIsset",
+        "prefix": "_php_if-isset",
         "body": [
             "if (isset(\\$${1:var})) {",
             "    $2",
@@ -322,13 +332,13 @@
         ],
         "description": "PHP - if (isset())"
     },
-    "PHP - $this->foo = $foo": {
-        "prefix": "_thisFoo",
-        "body": "\\$this->${1:foo} = \\$${1:foo};",
-        "description": "PHP - $this->foo = $foo"
+    "PHP - $this->var = $var": {
+        "prefix": "_php_this-var",
+        "body": "\\$this->${1:var} = \\$${1:var};",
+        "description": "PHP - $this->var = $var"
     },
     "PHP - get_class_methods - print_r": {
-        "prefix": "_getClassMethodsPrintR",
+        "prefix": "_php_get_class_methods-print_r",
         "body": [
             "echo '<pre>CLASS METHODS: ';",
             "print_r(get_class_methods(${1:Class}));",
@@ -337,7 +347,7 @@
         "description": "PHP - get_class_methods - print_r"
     },
     "PHP - Section Comment": {
-        "prefix": "_section-comment",
+        "prefix": "_php_section-comment",
         "body": [
             "/*--------------------------------------------------------------",
             "# ${1:Comment}",
@@ -346,12 +356,12 @@
         "description": "PHP - Section Comment"
     },
     "Single Comment # ►": {
-        "prefix": "_sComment",
+        "prefix": "_php_single-comment",
         "body": "# ► ${1:Single Comment}",
         "description": "Single Comment # ►"
     },
     "PHP - DocBlocker": {
-        "prefix": "_docBlocker",
+        "prefix": "_php_doc-blocker",
         "body": [
             "/**",
             " * ► ${1:Comment}",
@@ -363,8 +373,8 @@
         ],
         "description": "PHP - DocBlocker"
     },
-    "PHP - DocBlocker Single": {
-        "prefix": "_docBlockerSingle",
+    "PHP - Single DocBlocker": {
+        "prefix": "_php_single-doc-blocker",
         "body": [
             "/**",
             " * ► ${1:Comment}",
@@ -372,11 +382,204 @@
             " * @return ${2:void}",
             " */"
         ],
-        "description": "PHP - DocBlocker Single"
+        "description": "PHP - Single DocBlocker"
     },
     "PHP - Strict Types ON": {
-        "prefix": "_strictTypesON",
+        "prefix": "_php_strict_types-ON",
         "body": "declare(strict_types=1);",
         "description": "PHP - Strict Types ON"
+    },
+    "PHP - class public property": {
+        "prefix": "_php_public-property",
+        "body": [
+            "public \\$${1:propertyName}${2: = value};"
+        ],
+        "description": "PHP - class public property"
+    },
+    "PHP - class private property": {
+        "prefix": "_php_private-property",
+        "body": [
+            "private \\$${1:propertyName}${2: = value};"
+        ],
+        "description": "PHP - class private property"
+    },
+    "PHP - class protected property": {
+        "prefix": "_php_protected-property",
+        "body": [
+            "protected \\$${1:propertyName}${2: = value};"
+        ],
+        "description": "PHP - class protected property"
+    },
+    "PHP - class static property": {
+        "prefix": "_php_static-property",
+        "body": [
+            "${1:public }static \\$${2:propertyName}${3: = value};"
+        ],
+        "description": "PHP - class static property"
+    },
+    "PHP - PDO [MySQL] Data Base Connection": {
+        "prefix": "_php_PDO-DB-connection",
+        "body": [
+            "${1:define('__CONFIG', [",
+            "    'driver'   => 'mysql',",
+            "    'host'     => '127.0.0.1',",
+            "    'dbname'   => 'helmy_framework',",
+            "    'username' => 'root',",
+            "    'password' => '',",
+            "    'charset'  => 'utf8mb4'",
+            "]);}",
+            "",
+            "class DataBase",
+            "{",
+            "    private const DB_CONFIG = [",
+            "        'driver'   => __CONFIG['driver'],",
+            "        'host'     => __CONFIG['host'],",
+            "        'dbname'   => __CONFIG['dbname'],",
+            "        'username' => __CONFIG['username'],",
+            "        'password' => __CONFIG['password'],",
+            "        'charset'  => __CONFIG['charset']",
+            "    ];",
+            "",
+            "    private \\$pdo;",
+            "",
+            "    public function connect(): object",
+            "    {",
+            "        # ► Establecer una conexión a través de toda la aplicación",
+            "        if (\\$this->pdo == null && !is_object(\\$this->pdo)) {",
+            "",
+            "            try {",
+            "",
+            "                \\$DSN  = self::DB_CONFIG['driver'] . ': host=' . self::DB_CONFIG['host'] . ';dbname=' . self::DB_CONFIG['dbname'] . ';charset=' . self::DB_CONFIG['charset'];",
+            "                \\$USER = self::DB_CONFIG['username'];",
+            "                \\$PASS = self::DB_CONFIG['password'];",
+            "                \\$OPT  = [",
+            "                    PDO::ATTR_EMULATE_PREPARES   => false,",
+            "                    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,",
+            "                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,",
+            "                ];",
+            "",
+            "                \\$this->pdo = new PDO(\\$DSN, \\$USER, \\$PASS, \\$OPT);",
+            "",
+            "                if (is_object(\\$this->pdo)) {",
+            "                    echo '<p>CONEXIÓN ESTABLECIDA: ' . self::DB_CONFIG['dbname'] . '</p>';",
+            "                }",
+            "",
+            "            } catch (\\PDOException \\$e) {",
+            "                die(\"<p>ERROR!<br>{\\$e->getMessage()}</p>\");",
+            "            }",
+            "        }",
+            "",
+            "        return \\$this->pdo;",
+            "    }",
+            "",
+            "    public function disconnect(): void",
+            "    {",
+            "        \\$this->pdo = null;",
+            "        echo '<p>Desconectado!</p>';",
+            "        return;",
+            "    }",
+            "}"
+        ],
+        "description": "PHP - PDO [MySQL] Data Base Connection"
+    },
+    "PHP - try - catch": {
+        "prefix": "_php_try-catch",
+        "body": [
+            "try {",
+            "    $1",
+            "} catch (\\Throwable \\$e) {",
+            "    die(\"<p>ERROR!<br>{\\$e->getMessage()}</p>\");",
+            "}"
+        ],
+        "description": "PHP - try - catch"
+    },
+    "PHP - PDO [MySQL] Data Base Connection - Singleton": {
+        "prefix": "_php_PDO-DB-connection-singleton",
+        "body": [
+            "${1:define('DB_CONFIG', [",
+            "    'driver'   => 'mysql',",
+            "    'host'     => '127.0.0.1',",
+            "    'dbname'   => 'helmy_framework',",
+            "    'username' => 'root',",
+            "    'password' => '',",
+            "    'charset'  => 'utf8mb4'",
+            "]);}",
+            "",
+            "class DataBase",
+            "{",
+            "    private \\$dbName = null;",
+            "    private \\$dbHost = null;",
+            "    private \\$dbPass = null;",
+            "    private \\$dbUser = null;",
+            "    private static \\$instance = null;",
+            "",
+            "    private function __construct(\\$dbDetails = array())",
+            "    {",
+            "        # ► Please note that this is Private Constructor",
+            "        \\$this->dbDriver  = DB_CONFIG['driver'];",
+            "        \\$this->dbHost    = DB_CONFIG['host'];",
+            "        \\$this->dbName    = DB_CONFIG['dbname'];",
+            "        \\$this->dbUser    = DB_CONFIG['username'];",
+            "        \\$this->dbPass    = DB_CONFIG['password'];",
+            "        \\$this->dbCharset = DB_CONFIG['charset'];",
+            "        \\$this->dbOptions = [",
+            "                    PDO::ATTR_EMULATE_PREPARES   => false,",
+            "                    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,",
+            "                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,",
+            "                ];",
+            "",
+            "        # ► Your Code here to connect to database",
+            "        \\$this->pdo = new PDO(\\$this->dbDriver . ': host=' . \\$this->dbHost . ';dbname=' . \\$this->dbName . ';charset=' . \\$this->dbCharset, \\$this->dbUser, \\$this->dbPass, \\$this->dbOptions);",
+            "",
+            "        if (is_object(\\$this->pdo)) {",
+            "            echo '<p>CONEXIÓN ESTABLECIDA: ' . DB_CONFIG['dbname'] . '</p>';",
+            "        }",
+            "    }",
+            "",
+            "    public static function connect(\\$dbDetails = array())",
+            "    {",
+            "        # ► Check if instance is already exists      ",
+            "        if (self::\\$instance == null) {",
+            "            self::\\$instance = new Database(\\$dbDetails);",
+            "        }",
+            "",
+            "        return self::\\$instance;",
+            "    }",
+            "",
+            "    private function __clone()",
+            "    {",
+            "        # ► Stopping Clonning of Object",
+            "    }",
+            "",
+            "    private function __wakeup()",
+            "    {",
+            "        # ► Stopping unserialize of object",
+            "    }",
+            "",
+            "    protected function disconnect(): void",
+            "    {",
+            "        \\$this->pdo = null;",
+            "        echo '<p>Desconectado!</p>';",
+            "        return;",
+            "    }",
+            "}"
+        ],
+        "description": "PHP - PDO [MySQL] Data Base Connection - Singleton"
+    },
+    "PHP - ONLY_FULL_GROUP_BY disabled": {
+        "prefix": "_php_ONLY_FULL_GROUP_BY_disabled",
+        "body": [
+            "protected function ONLY_FULL_GROUP_BY_disabled(): void",
+            "{",
+            "    try {",
+            "        \\$sql  = \"SET SESSION sql_mode=(SELECT REPLACE(@@sql_mode, 'ONLY_FULL_GROUP_BY', ''));\";",
+            "        \\$stmt = \\$this->pdo->prepare(\\$sql);",
+            "        \\$stmt->execute();",
+            "    } catch (\\PDOException \\$e) {",
+            "        die(\"<p>ERROR!<br>{\\$e->getMessage()}</p>\");",
+            "    }",
+            "}"
+        ],
+        "description": "PHP - ONLY_FULL_GROUP_BY disabled"
     }
 }

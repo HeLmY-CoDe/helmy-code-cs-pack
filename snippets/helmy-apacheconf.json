@@ -1,6 +1,6 @@
 {
-    "HTACCESS - Set Access-Control-Allow-Origin": {
-        "prefix": "_accessControlAllowOrigin",
+    "APACHE - Set Access-Control-Allow-Origin": {
+        "prefix": "_apache_Access-Control-Allow-Origin",
         "body": [
             "Header always edit Set-Cookie ^(.*)\\$ \\$1;SameSite=None;Secure",
             "<IfModule mod_headers.c>",
@@ -9,27 +9,27 @@
             "    </FilesMatch>",
             "</IfModule>"
         ],
-        "description": "HTACCESS - Set Access-Control-Allow-Origin"
+        "description": "APACHE - Set Access-Control-Allow-Origin"
     },
-    "HTACCESS - Disable Indexes": {
-        "prefix": "_-Indexes",
+    "APACHE - Disable Indexes": {
+        "prefix": "_apache_-Indexes",
         "body": [
             "Options All -Indexes"
         ],
-        "description": "HTACCESS - Disable Indexes"
+        "description": "APACHE - Disable Indexes"
     },
-    "HTACCESS - Deny files extensions": {
-        "prefix": "_denyFilesExts",
+    "APACHE - Deny files extensions": {
+        "prefix": "_apache_deny-files-extensions",
         "body": [
-            "<Files ~ \".(${1:htaccess|env|ext})\\$\">",
+            "<Files ~ \".(${1:APACHE|env|ext})\\$\">",
             "    Order Allow,Deny",
             "    Deny from all",
             "</Files>$0"
         ],
-        "description": "HTACCESS - Deny files extensions"
+        "description": "APACHE - Deny files extensions"
     },
-    "HTACCESS - Friendly URLs": {
-        "prefix": "_friendlyURLs",
+    "APACHE - Friendly URLs": {
+        "prefix": "_apache_friendly-URLs",
         "body": [
             "<IfModule mod_rewrite.c>",
             "    <IfModule mod_negotiation.c>",
@@ -44,10 +44,10 @@
             "    RewriteRule ^(.+)\\$ index.php?uri=\\$1/ [QSA,L]",
             "</IfModule>"
         ],
-        "description": "HTACCESS - Friendly URLs"
+        "description": "APACHE - Friendly URLs"
     },
-    "HTACCESS - Extended Basic Config": {
-        "prefix": "_extendBasicConfig",
+    "APACHE - Extended Basic Config": {
+        "prefix": "_apache_extend-basic-config",
         "body": [
             "Header always edit Set-Cookie ^(.*)\\$ \\$1;SameSite=None;Secure",
             "<IfModule mod_headers.c>",
@@ -58,7 +58,7 @@
             "",
             "Options All -Indexes",
             "",
-            "<Files ~ \".(htaccess|env)\\$\">",
+            "<Files ~ \".(APACHE|env)\\$\">",
             "    Order Allow,Deny",
             "    Deny from all",
             "</Files>",
@@ -140,6 +140,6 @@
             "    ExpiresByType image/svg+xml                       \"access plus 1 month\"",
             "</IfModule>"
         ],
-        "description": "HTACCESS - Extended Basic Config"
+        "description": "APACHE - Extended Basic Config"
     }
 }

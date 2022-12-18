@@ -1,46 +1,47 @@
 {
     "JS - Alert": {
-        "prefix": "_alert",
+        "prefix": "_js_alert",
         "body": [
             "alert(${1:foo});"
         ],
         "description": "JS - Alert"
     },
-    "JS - console log": {
-        "prefix": "_console",
+    "JS - console.log": {
+        "prefix": "_js_console-log",
         "body": [
             "console.log(${1:foo});"
         ],
-        "description": "JS - console log"
+        "description": "JS - console.log"
     },
-    "JS - console log template literals": {
-        "prefix": "_consoleTL",
+    "JS - Text console.log": {
+        "prefix": "_js_text-console-log",
+        "body": [
+            "console.log('${1:foo}:', ${1:foo});"
+        ],
+        "description": "JS - Text console.log"
+    },
+    "JS - console.log - return": {
+        "prefix": "_js_console-log-return",
+        "body": [
+            "console.log(${1:foo});",
+            "return;"
+        ],
+        "description": "JS - console.log - return"
+    },
+    "JS - console.log template literals": {
+        "prefix": "_js_console-log-template-literals",
         "body": [
             "console.log(`${1:foo}`);"
         ],
-        "description": "JS - console log template literals"
-    },
-    "JS - Comment Separator": {
-        "prefix": "_comSep",
-        "body": [
-            "/* ------------------------- */"
-        ],
-        "description": "JS - Comment Separator"
-    },
-    "JS - Comment Separator Text": {
-        "prefix": "_comSepText",
-        "body": [
-            "/* ------- ${1:Text} ------- */"
-        ],
-        "description": "JS - Comment Separator Text"
+        "description": "JS - console.log template literals"
     },
     "JS - Variable en template literals": {
-        "prefix": "_$",
+        "prefix": "_js_$",
         "body": "\\${${1:foo}}",
         "description": "JS - Variable en template literals"
     },
     "JQuery - $.ajax": {
-        "prefix": "_ajaxJQ",
+        "prefix": "_jq_ajax",
         "body": [
             "$.ajax({\r",
             "\turl: '${1:ajax/}',\r",
@@ -65,7 +66,7 @@
         "description": "JQuery - $.ajax"
     },
     "JQuery - ready()": {
-        "prefix": "_readyJQ",
+        "prefix": "_jq_ready",
         "body": [
             "$(document).ready(function() {",
             "    ${1:console.log('READY!');}",
@@ -74,7 +75,7 @@
         "description": "JQuery - ready()"
     },
     "JQuery - ready() shorthand": {
-        "prefix": "_readyShorthandJQ",
+        "prefix": "_jq_ready-shorthand",
         "body": [
             "$(function () {\r",
             "    ${1:console.log('READY!');}",
@@ -82,30 +83,22 @@
         ],
         "description": "JQuery - ready() shorthand"
     },
-    "JS - console.log": {
-        "prefix": "_consoleLog",
+    "JS - Comment Separator": {
+        "prefix": "_js_comment-separator",
         "body": [
-            "console.log(${1:foo});"
+            "/* ------------------------- */"
         ],
-        "description": "JS - console.log"
+        "description": "JS - Comment Separator"
     },
-    "JS - Text console.log": {
-        "prefix": "_consoleLogTxt",
+    "JS - Comment Separator Text": {
+        "prefix": "_js_text-comment-separator",
         "body": [
-            "console.log('${1:foo}:', ${1:foo});"
+            "/* ------- ${1:Text} ------- */"
         ],
-        "description": "JS - Text console.log"
-    },
-    "JS - console.log - return": {
-        "prefix": "_consoleLogReturn",
-        "body": [
-            "console.log(${1:foo});",
-            "return;"
-        ],
-        "description": "JS - console.log - return"
+        "description": "JS - Comment Separator Text"
     },
     "JS - Section Comment": {
-        "prefix": "_sectionCom",
+        "prefix": "_js_section-comment",
         "body": [
             "/*--------------------------------------------------------------",
             "# ${1:Comment}",

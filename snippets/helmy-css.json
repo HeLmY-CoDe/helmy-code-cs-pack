@@ -1,13 +1,13 @@
 {
     "CSS - var": {
-        "prefix": "_var",
+        "prefix": "_css_var",
         "body": [
             "var(--$1)"
         ],
         "description": "CSS - var"
     },
     "CSS - Simple Reset": {
-        "prefix": "_reset",
+        "prefix": "_css_reset",
         "body": [
             "* {",
             "    margin: 0;",
@@ -19,7 +19,7 @@
         "description": "CSS - Simple Reset"
     },
     "CSS - id selector": {
-        "prefix": "_idSel",
+        "prefix": "_css_id-selector",
         "body": [
             "#$1 {",
             "    $2",
@@ -28,7 +28,7 @@
         "description": "CSS - id selector"
     },
     "CSS - class selector": {
-        "prefix": "_classSel",
+        "prefix": "_css_class-selector",
         "body": [
             ".$1 {",
             "    $2",
@@ -37,7 +37,7 @@
         "description": "CSS - class selector"
     },
     "CSS - property selector": {
-        "prefix": "_propSel",
+        "prefix": "_css_prop-selector",
         "body": [
             "${1:selector}[${2:attribute}=${3:value}] {",
             "    $4",
@@ -46,21 +46,21 @@
         "description": "CSS - property selector"
     },
     "CSS - Comment Separator": {
-        "prefix": "_comSep",
+        "prefix": "_css_comment-separator",
         "body": [
             "/* ------------------------- */"
         ],
         "description": "CSS - Comment Separator"
     },
     "CSS - Text Comment Separator": {
-        "prefix": "_comSepTxt",
+        "prefix": "_css_text-comment-separator",
         "body": [
             "/* ------- ${1:text} ------- */"
         ],
         "description": "CSS - Text Comment Separator"
     },
     "CSS - Section Comment": {
-        "prefix": "_sectionCom",
+        "prefix": "_css_section-comment",
         "body": [
             "/*--------------------------------------------------------------",
             "# ${1:Comment}",
