@@ -38,35 +38,35 @@
         "description": "HTML - Basic table estructure, thead - tbody"
     },
     "Bootstrap v4.6.1 CDN - CSS": {
-        "prefix": "_html_bootstrapCDN-CSS",
+        "prefix": "_html_bootstrap_CDN_CSS",
         "body": [
             "<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css\" integrity=\"sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn\" crossorigin=\"anonymous\">"
         ],
         "description": "Bootstrap v4.6.1 CDN - CSS"
     },
     "JQuery Slim v3.6.1 CDN": {
-        "prefix": "_html_jquerySlimCDN",
+        "prefix": "_html_jquery_slim_CDN",
         "body": [
             "<script src=\"https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js\" integrity=\"sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=\" crossorigin=\"anonymous\"></script>"
         ],
         "description": "JQuery Slim v3.6.1 CDN"
     },
     "JQuery v3.6.1 CDN": {
-        "prefix": "_html_jqueryCDN",
+        "prefix": "_html_jquery_CDN",
         "body": [
             "<script src=\"https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js\" integrity=\"sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=\" crossorigin=\"anonymous\"></script>"
         ],
         "description": "JQuery v3.6.1 CDN"
     },
     "Bootstrap Bundle v4.6.1 CDN - JS (includes Popper)": {
-        "prefix": "_html_bootstrapCDN-JS-Bundle",
+        "prefix": "_html_bootstrap_CDN_JS_Bundle",
         "body": [
             "<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF\" crossorigin=\"anonymous\"></script>"
         ],
         "description": "Bootstrap v4.6.1 CDN - JS"
     },
     "Bootstrap Separate v4.6.1 CDN - JS": {
-        "prefix": "_html_bootstrapCDN-JS-Separate",
+        "prefix": "_html_bootstrap_CDN_JS_Separate",
         "body": [
             "<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\" integrity=\"sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN\" crossorigin=\"anonymous\"></script>",
             "<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js\" integrity=\"sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2\" crossorigin=\"anonymous\"></script>"
@@ -74,14 +74,14 @@
         "description": "Bootstrap Separate v4.6.1 CDN - JS"
     },
     "Font Awesome cdnjs v6.2.0": {
-        "prefix": "_html_fontawesome-cdnjs",
+        "prefix": "_html_fontawesome_CDNJS",
         "body": [
             "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css\">"
         ],
         "description": "Font Awesome cdnjs v6.2.0"
     },
     "PHP - Open tag": {
-        "prefix": "_php_open-tag",
+        "prefix": "_php_open_tag",
         "body": [
             "<?php",
             "$0"
@@ -100,22 +100,22 @@
         "description": "PHP-HTML - insert PHP code"
     },
     "PHP-HTML - echo $var": {
-        "prefix": "_php_echo-var",
+        "prefix": "_php_echo_var",
         "body": "<?php echo \\$${1:var}; ?>",
         "description": "PHP-HTML - echo $var"
     },
     "PHP-HTML - short echo tags": {
-        "prefix": "_php_short-echo-tags",
+        "prefix": "_php_short_echo_tags",
         "body": "<?= $1; ?>",
         "description": "PHP-HTML - short echo tags"
     },
     "PHP-HTML - echo isset ternary": {
-        "prefix": "_php_echo-isset-ternary",
+        "prefix": "_php_echo_isset_ternary",
         "body": "<?php echo isset(${1:cond}) ? ${2:true} : ${3:false}; ?>",
         "description": "PHP-HTML - echo isset ternary"
     },
     "PHP - Alternative 'if' syntax": {
-        "prefix": "_php_alternative-if",
+        "prefix": "_php_alternative_if",
         "body": [
             "<?php if (${1:cond}) : ?>",
             "",
@@ -126,7 +126,7 @@
         "description": "PHP - Alternative 'if' syntax"
     },
     "PHP - Alternative 'while' syntax": {
-        "prefix": "_php_alternative-while",
+        "prefix": "_php_alternative_while",
         "body": [
             "<?php while (${1:cond}) : ?>",
             "",
@@ -137,7 +137,7 @@
         "description": "PHP - Alternative 'while' syntax"
     },
     "PHP - Alternative 'for' syntax": {
-        "prefix": "_php_alternative-for",
+        "prefix": "_php_alternative_for",
         "body": [
             "<?php for (\\$${1:i} ${2:=} ${3:0}; \\$${1:i} ${4:<} ${5:\\$n}; \\$${1:i}${6:++}) : ?>",
             "",
@@ -148,7 +148,7 @@
         "description": "PHP - Alternative 'for' syntax"
     },
     "PHP - Alternative 'foreach' syntax": {
-        "prefix": "_php_alternative-foreach",
+        "prefix": "_php_alternative_foreach",
         "body": [
             "<?php foreach (\\$${1:list} as \\$${2:item}) : ?>",
             "",
@@ -159,7 +159,7 @@
         "description": "PHP - Alternative 'foreach' syntax"
     },
     "PHP - Alternative 'foreach - key' syntax": {
-        "prefix": "_php_alternative-foreach-key",
+        "prefix": "_php_alternative_foreach_key",
         "body": [
             "<?php foreach (\\$${1:list} as \\$${2:key} => \\$${3:value}) : ?>",
             "",
@@ -170,12 +170,22 @@
         "description": "PHP - Alternative 'foreach - key' syntax"
     },
     "HTML - Section Comment": {
-        "prefix": "_html_section-comment",
+        "prefix": "_html_section_comment",
         "body": [
             "<!----------------------------------------------------------------",
             "# ${1:Comment}",
             "---------------------------------------------------------------->"
         ],
         "description": "HTML - Section Comment"
+    },
+    "HTML - ES MODULES script tags": {
+        "prefix": "_html_es_modules_script_tags",
+        "body": "<script src=\"${1:./path/file.js}\" type=\"module\"></script>",
+        "description": "HTML - ES MODULES script tags"
+    },
+    "HTML - ES MODULES script tags - NO SUPPORT BROWSERS": {
+        "prefix": "_html_es_modules_script_tags_NO_SUPPORT_BROWSERS",
+        "body": "<script src=\"${1:./path/file.js}\" nomodule></script>",
+        "description": "HTML - ES MODULES script tags - NO SUPPORT BROWSERS"
     }
 }

@@ -1,4 +1,13 @@
 {
+    "JS - DomContentLoaded Listener (DOM READY!)": {
+        "prefix": "_js_DomContentLoaded",
+        "body": [
+            "document.addEventListener('DOMContentLoaded', function() {",
+            "    ${1:console.log('READY!');}",
+            "});"
+        ],
+        "description": "JS - DomContentLoaded Listener (DOM READY!)"
+    },
     "JS - Alert": {
         "prefix": "_js_alert",
         "body": [
@@ -7,21 +16,21 @@
         "description": "JS - Alert"
     },
     "JS - console.log": {
-        "prefix": "_js_console-log",
+        "prefix": "_js_console_log",
         "body": [
             "console.log(${1:foo});"
         ],
         "description": "JS - console.log"
     },
     "JS - Text console.log": {
-        "prefix": "_js_text-console-log",
+        "prefix": "_js_text_console_log",
         "body": [
             "console.log('${1:foo}:', ${1:foo});"
         ],
         "description": "JS - Text console.log"
     },
     "JS - console.log - return": {
-        "prefix": "_js_console-log-return",
+        "prefix": "_js_console_log_return",
         "body": [
             "console.log(${1:foo});",
             "return;"
@@ -29,7 +38,7 @@
         "description": "JS - console.log - return"
     },
     "JS - console.log template literals": {
-        "prefix": "_js_console-log-template-literals",
+        "prefix": "_js_console_log_template_literals",
         "body": [
             "console.log(`${1:foo}`);"
         ],
@@ -39,6 +48,25 @@
         "prefix": "_js_$",
         "body": "\\${${1:foo}}",
         "description": "JS - Variable en template literals"
+    },
+    "JS - Event Prevent Default": {
+        "prefix": "_js_event.preventDefault",
+        "body": "${1:event}.preventDefault();",
+        "description": "JS - Event Prevent Default"
+    },
+    "JS - Arrow function": {
+        "prefix": "_js_arrow_function",
+        "body": [
+            "${1:const} ${2:functionName} = ${3:async} (${4:params}) => {",
+            "    $5",
+            "}"
+        ],
+        "description": "JS - Arrow function"
+    },
+    "JQuery - Selector": {
+        "prefix": "_jq_selector",
+        "body": "\\$('${1:#}${2:element}')",
+        "description": "JQuery - Selector"
     },
     "JQuery - $.ajax": {
         "prefix": "_jq_ajax",
@@ -75,7 +103,7 @@
         "description": "JQuery - ready()"
     },
     "JQuery - ready() shorthand": {
-        "prefix": "_jq_ready-shorthand",
+        "prefix": "_jq_ready_shorthand",
         "body": [
             "$(function () {\r",
             "    ${1:console.log('READY!');}",
@@ -83,22 +111,31 @@
         ],
         "description": "JQuery - ready() shorthand"
     },
+    "JQuery - ready() arrow shorthand": {
+        "prefix": "_jq_ready_arrow_shorthand",
+        "body": [
+            "$(() => {\r",
+            "    ${1:console.log('READY!');}",
+            "})"
+        ],
+        "description": "JQuery - ready() arrow shorthand"
+    },
     "JS - Comment Separator": {
-        "prefix": "_js_comment-separator",
+        "prefix": "_js_comment_separator",
         "body": [
             "/* ------------------------- */"
         ],
         "description": "JS - Comment Separator"
     },
     "JS - Comment Separator Text": {
-        "prefix": "_js_text-comment-separator",
+        "prefix": "_js_text_comment_separator",
         "body": [
             "/* ------- ${1:Text} ------- */"
         ],
         "description": "JS - Comment Separator Text"
     },
     "JS - Section Comment": {
-        "prefix": "_js_section-comment",
+        "prefix": "_js_section_comment",
         "body": [
             "/*--------------------------------------------------------------",
             "# ${1:Comment}",

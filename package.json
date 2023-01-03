@@ -2,7 +2,7 @@
   "name": "helmy-code-cs-pack",
   "displayName": "HeLmY CoDe - Web Development Code Snippets Pack",
   "description": "HeLmY's Web Development Code Snippets complement pack!\nHTML - CSS - JavaScript - PHP - Apache",
-  "version": "1.1.5",
+  "version": "1.2.4",
   "engines": {
     "vscode": "*"
   },
@@ -24,6 +24,7 @@
     "snippets",
     "productivity",
     "coding",
+    "web development",
     "html",
     "css",
     "javascript",

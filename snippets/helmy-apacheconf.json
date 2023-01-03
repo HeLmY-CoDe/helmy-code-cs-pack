@@ -19,7 +19,7 @@
         "description": "APACHE - Disable Indexes"
     },
     "APACHE - Deny files extensions": {
-        "prefix": "_apache_deny-files-extensions",
+        "prefix": "_apache_deny_files_extensions",
         "body": [
             "<Files ~ \".(${1:APACHE|env|ext})\\$\">",
             "    Order Allow,Deny",
@@ -29,7 +29,7 @@
         "description": "APACHE - Deny files extensions"
     },
     "APACHE - Friendly URLs": {
-        "prefix": "_apache_friendly-URLs",
+        "prefix": "_apache_friendly_URLs",
         "body": [
             "<IfModule mod_rewrite.c>",
             "    <IfModule mod_negotiation.c>",
@@ -47,7 +47,7 @@
         "description": "APACHE - Friendly URLs"
     },
     "APACHE - Extended Basic Config": {
-        "prefix": "_apache_extend-basic-config",
+        "prefix": "_apache_extend_basic_config",
         "body": [
             "Header always edit Set-Cookie ^(.*)\\$ \\$1;SameSite=None;Secure",
             "<IfModule mod_headers.c>",
